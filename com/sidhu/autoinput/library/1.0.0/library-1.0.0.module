@@ -1,0 +1,111 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.sidhu.autoinput",
+    "module": "library",
+    "version": "1.0.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.6"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseVariantReleaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.20"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "library-1.0.0.aar",
+          "url": "library-1.0.0.aar",
+          "size": 27147,
+          "sha512": "a399f873e7bb680279bd9b409a8a7a52235816f937def8f5cab08d6c9354d16f8b04d06592937304d971afba18cf4faf62c8e8a8069493bb5be8902b62846428",
+          "sha256": "95bc53aff2108c31c63f9a96fef9acfa47ee1c20f0f55c60a99f9786c86fa493",
+          "sha1": "8716bd1ecbc9d46898411ff275753ca1ff0c5263",
+          "md5": "891f758877fcfc35d0ccb5121ee08310"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.core",
+          "module": "core-ktx",
+          "version": {
+            "requires": "1.12.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-android",
+          "version": {
+            "requires": "1.7.3"
+          }
+        },
+        {
+          "group": "com.belerweb",
+          "module": "pinyin4j",
+          "version": {
+            "requires": "2.5.0"
+          }
+        },
+        {
+          "group": "com.google.mlkit",
+          "module": "text-recognition",
+          "version": {
+            "requires": "16.0.1"
+          }
+        },
+        {
+          "group": "com.google.mlkit",
+          "module": "text-recognition-chinese",
+          "version": {
+            "requires": "16.0.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.20"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "library-1.0.0.aar",
+          "url": "library-1.0.0.aar",
+          "size": 27147,
+          "sha512": "a399f873e7bb680279bd9b409a8a7a52235816f937def8f5cab08d6c9354d16f8b04d06592937304d971afba18cf4faf62c8e8a8069493bb5be8902b62846428",
+          "sha256": "95bc53aff2108c31c63f9a96fef9acfa47ee1c20f0f55c60a99f9786c86fa493",
+          "sha1": "8716bd1ecbc9d46898411ff275753ca1ff0c5263",
+          "md5": "891f758877fcfc35d0ccb5121ee08310"
+        }
+      ]
+    }
+  ]
+}
