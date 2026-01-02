@@ -1,16 +1,16 @@
 # AutoInput Library
 
-A powerful Android library for simulating comprehensive visual keyboard input and text automation, supporting both English and Chinese input methods via ML Kit OCR.
+A powerful Android library for simulating comprehensive visual keyboard input and text automation, supporting both English and Chinese input methods.
 
 **Current Version**: `1.0.0`
 
 ## Features
 
-*   **Visual Keyboard Simulation**: Uses ML Kit to scan the screen, identify keyboard keys, and simulate taps to input text.
-*   **Chinese Input Support**: Automatically converts Chinese text to Pinyin, types it, and selects the correct candidate from the suggestion bar via OCR.
+*   **Visual Keyboard Simulation**: Intelligently scans the screen to identify keyboard keys and simulates natural taps to input text.
+*   **Chinese Input Support**: Automatically handles Chinese text input, including Pinyin conversion, typing, and smart candidate selection from the suggestion bar.
 *   **Robust & Resilient**:
-    *   Handles "Grouped" keys (e.g. `qwerty` detected as one block) by inferring key positions.
-    *   Tolerates occasional OCR misses (continues typing instead of aborting).
+    *   Handles complex keyboard layouts and "grouped" keys effectively.
+    *   Tolerates occasional recognition variances to ensure continuous typing flow.
     *   Optimized logic for special keys (`Enter`, `Space`, `Search` in both English and Chinese).
 *   **Privacy Focused**: Closed-source distribution via Maven Repo.
 
