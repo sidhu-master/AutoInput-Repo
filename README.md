@@ -1,4 +1,4 @@
-# AutoInput Library
+ï»¿# AutoInput Library
 
 A powerful Android library for simulating comprehensive visual keyboard input and text automation, supporting both English and Chinese input methods.
 
@@ -77,7 +77,7 @@ scope.launch {
     
     if (screenshot != null) {
         val success = keyboardAgent.type(
-            text = "ÄãºÃWorld", 
+            text = "ä½ å¥½World", 
             screenshot = screenshot,
             screenshotProvider = { 
                 // Callback to provide fresh screenshots for candidate selection (Crucial for Chinese)
