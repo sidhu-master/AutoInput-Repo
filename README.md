@@ -64,34 +64,47 @@ dependencies {
 
 ## Usage Example
 
-The core class is `KeyboardAgent`. Typically, you would use it within an AccessibilityService context.
+The core class is `KeyboardAgent`. Use it within an AccessibilityService context.
 
 ```kotlin
 // 1. Initialize the agent with your AccessibilityService
 val keyboardAgent = KeyboardAgent(service)
 
-// 2. Perform text input
+// 2. Simple text input (auto handles screenshot and segmentation)
 scope.launch {
-    // Take a screenshot of the keyboard area
-    val screenshot = takeScreenshot() 
-    
-    if (screenshot != null) {
-        val success = keyboardAgent.type(
-            text = "你好World", 
-            screenshot = screenshot,
-            screenshotProvider = { 
-                // Callback to provide fresh screenshots for candidate selection (Crucial for Chinese)
-                delay(500)
-                takeScreenshot() 
-            }
-        )
-        
-        if (success) {
-            Log.d("AutoInput", "Typing completed successfully!")
-        }
+    val success = keyboardAgent.type("你好World")
+    if (success) {
+        Log.d("AutoInput", "Typing completed!")
     }
 }
+
+// 3. Sentence input with segmentation mode
+scope.launch {
+    // SMART mode: auto segments Chinese text for better candidate matching
+    keyboardAgent.typeSentence("今天天气真好", KeyboardAgent.SegmentMode.SMART)
+    
+    // BY_CHAR mode: input character by character
+    keyboardAgent.typeSentence("你好", KeyboardAgent.SegmentMode.BY_CHAR)
+    
+    // NO_SEGMENT mode: treat as single word
+    keyboardAgent.typeSentence("Hello", KeyboardAgent.SegmentMode.NO_SEGMENT)
+}
+
+// 4. Input pre-segmented words
+scope.launch {
+    val segments = listOf("今天", "天气", "真好")
+    keyboardAgent.typeSegments(segments)
+}
 ```
+
+### Segmentation Modes
+
+| Mode | Description |
+|------|-------------|
+| `SMART` | Auto segments Chinese text intelligently (recommended) |
+| `ACCURATE` | More accurate segmentation, slightly slower |
+| `BY_CHAR` | Input character by character |
+| `NO_SEGMENT` | No segmentation, treat input as single word |
 
 ## Requirements
 
