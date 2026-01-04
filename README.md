@@ -66,11 +66,29 @@ dependencies {
 
 The core class is `KeyboardAgent`. Use it within an AccessibilityService context.
 
-```kotlin
-// 1. Initialize the agent with your AccessibilityService
-val keyboardAgent = KeyboardAgent(service)
+### Setup
 
-// 2. Simple text input (auto handles screenshot and segmentation)
+```kotlin
+// In your AccessibilityService class
+class MyAccessibilityService : AccessibilityService() {
+    
+    // Initialize KeyboardAgent with your service instance
+    private val keyboardAgent by lazy { KeyboardAgent(this) }
+    
+    // Or initialize when needed
+    private var keyboardAgent: KeyboardAgent? = null
+    
+    override fun onServiceConnected() {
+        super.onServiceConnected()
+        keyboardAgent = KeyboardAgent(this)
+    }
+}
+```
+
+### Basic Usage
+
+```kotlin
+// Simple text input (auto handles screenshot and segmentation)
 scope.launch {
     val success = keyboardAgent.type("你好World")
     if (success) {
@@ -78,7 +96,7 @@ scope.launch {
     }
 }
 
-// 3. Sentence input with segmentation mode
+// Sentence input with segmentation mode
 scope.launch {
     // SMART mode: auto segments Chinese text for better candidate matching
     keyboardAgent.typeSentence("今天天气真好", KeyboardAgent.SegmentMode.SMART)
@@ -90,7 +108,7 @@ scope.launch {
     keyboardAgent.typeSentence("Hello", KeyboardAgent.SegmentMode.NO_SEGMENT)
 }
 
-// 4. Input pre-segmented words
+// Input pre-segmented words
 scope.launch {
     val segments = listOf("今天", "天气", "真好")
     keyboardAgent.typeSegments(segments)
