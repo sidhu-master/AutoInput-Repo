@@ -1,0 +1,152 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.sidhu.autoinput",
+    "module": "library",
+    "version": "1.1.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.5"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "dependencies": [
+        {
+          "group": "com.microsoft.onnxruntime",
+          "module": "onnxruntime-android",
+          "version": {
+            "requires": "1.17.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.20"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "library-1.1.1.aar",
+          "url": "library-1.1.1.aar",
+          "size": 18843571,
+          "sha512": "a3d06e89003cb488993ee5ad5db628391c5b0fb1f48dcbf1cf9e310aea73eee041a7d3cca64c949e673ccd1705710c97bcd820ebd56de385fee20b83caaa25af",
+          "sha256": "845909f569126592b9a9e2a885236df25e95bc470188ae34419ac89223093dde",
+          "sha1": "86d0a57ab6affaf43e7044e8a6d3ee696720de79",
+          "md5": "f63859de9d0e753218e14c770c69fc7d"
+        }
+      ]
+    },
+    {
+      "name": "releaseRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.core",
+          "module": "core-ktx",
+          "version": {
+            "requires": "1.12.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-android",
+          "version": {
+            "requires": "1.7.3"
+          }
+        },
+        {
+          "group": "com.belerweb",
+          "module": "pinyin4j",
+          "version": {
+            "requires": "2.5.1"
+          }
+        },
+        {
+          "group": "com.google.mlkit",
+          "module": "text-recognition",
+          "version": {
+            "requires": "16.0.1"
+          }
+        },
+        {
+          "group": "com.google.mlkit",
+          "module": "text-recognition-chinese",
+          "version": {
+            "requires": "16.0.1"
+          }
+        },
+        {
+          "group": "com.huaban",
+          "module": "jieba-analysis",
+          "version": {
+            "requires": "1.0.2"
+          }
+        },
+        {
+          "group": "com.microsoft.onnxruntime",
+          "module": "onnxruntime-android",
+          "version": {
+            "requires": "1.17.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.20"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "library-1.1.1.aar",
+          "url": "library-1.1.1.aar",
+          "size": 18843571,
+          "sha512": "a3d06e89003cb488993ee5ad5db628391c5b0fb1f48dcbf1cf9e310aea73eee041a7d3cca64c949e673ccd1705710c97bcd820ebd56de385fee20b83caaa25af",
+          "sha256": "845909f569126592b9a9e2a885236df25e95bc470188ae34419ac89223093dde",
+          "sha1": "86d0a57ab6affaf43e7044e8a6d3ee696720de79",
+          "md5": "f63859de9d0e753218e14c770c69fc7d"
+        }
+      ]
+    },
+    {
+      "name": "releaseSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "files": [
+        {
+          "name": "library-1.1.1-sources.jar",
+          "url": "library-1.1.1-sources.jar",
+          "size": 82903,
+          "sha512": "eda8c4d99c51f68b57d07bdeb300993afe9c4bf8df22cf0c079419574f46fdf90548a3e277610317bbff35efbcbdb1faf217f9bfc8ce80eb5c368fc0dfb6a481",
+          "sha256": "bd852125bce66310781c2e55dcfe4f3a3825c0fec7379d29402c517dd13b5207",
+          "sha1": "81e6523d354c840b6eac71e4f85d500d6e51beb4",
+          "md5": "20757b020fb91a7770e93610a3c8a333"
+        }
+      ]
+    }
+  ]
+}

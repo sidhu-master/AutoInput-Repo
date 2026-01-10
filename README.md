@@ -1,8 +1,8 @@
-﻿# AutoInput Library
+# AutoInput Library
 
 A powerful Android library for simulating comprehensive visual keyboard input and text automation, supporting both English and Chinese input methods.
 
-**Current Version**: `1.1.0`
+**Current Version**: `1.1.1`
 
 ## Features
 
@@ -51,14 +51,14 @@ Add the library dependency to your module`s `build.gradle` (usually `app/build.g
 **Kotlin DSL:**
 ```kotlin
 dependencies {
-    implementation("com.sidhu.autoinput:library:1.1.0")
+    implementation("com.sidhu.autoinput:library:1.1.1")
 }
 ```
 
 **Groovy DSL:**
 ```groovy
 dependencies {
-    implementation "com.sidhu.autoinput:library:1.1.0"
+    implementation "com.sidhu.autoinput:library:1.1.1"
 }
 ```
 
@@ -128,4 +128,3 @@ scope.launch {
 
 *   **Min SDK**: 30 (Android 11)
 *   **Permissions**: Requires `AccessibilityService` permissions to dispatch gestures.
-
